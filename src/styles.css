@@ -215,6 +215,13 @@ a {
     .logo{
         display: none;
     }
+    .whatido{
+        display: flex;
+        padding: 80px;
+    }
+    .headshot-container{
+        display: flex;
+    }
 }
 
 container {
@@ -249,4 +256,16 @@ input[type=submit] {
 	position: relative;
 	display: inline-block;
 	text-align: center;
+}
+
+h3 {
+    text-decoration: underline;
+    text-decoration-color: aquamarine;            
+
+}
+
+whatido {
+    text-decoration: underline;
+    text-decoration-color: aquamarine;            
+
 }
