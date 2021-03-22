@@ -7,11 +7,15 @@ section {
 }
 
 .hero {
+    text-decoration: none;
     background-color: #1c1d25;
     height: 100vh;
     color: white;
     font-size: 40px;
+    outline: none;
+    border: none;
 }
+
 
 footer {
     background-color: black;
@@ -64,11 +68,13 @@ p{
     height: 100%;
     justify-content: space-between;
     align-items: center;
+    text-decoration: none;
 }
 
 .hero-text{
     margin-left: 80px;
     margin-bottom: 200px;
+    text-decoration: none;
 
 }
 
@@ -82,10 +88,12 @@ p{
     font-weight: 300;
     padding-top: 5px;
     margin-top: 20px;
+    text-decoration: none;
 }
 
 .button:hover {
     background-color: #ef744b;
+    text-decoration:none;
 }
 
 .button:active{
@@ -131,7 +139,7 @@ p{
 
 .project-card{
     width: 300px;
-    height: 500px;
+    height: 550px;
     box-shadow: 5px 5px 20px rgb(197, 195, 195);
     margin: 10px;
 }
@@ -207,4 +215,38 @@ a {
     .logo{
         display: none;
     }
+}
+
+container {
+    width: 100%;
+	text-align: center;
+	margin: 35px 0 20px 0;
+    
+}
+
+/* Add styles to 'input' and 'textarea' selectors */
+input[type=text],input[type=email], textarea {
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-size: 100%
+}
+/* Add styles to the submit button */
+input[type=submit] {
+	background: #64B5F6;
+	margin: 0 auto;
+	outline: 0;
+	color: white;
+	border: 0;
+	padding: 12px 24px;
+	border-radius: 4px;
+	transition: all ease-in-out 0.1s;
+	position: relative;
+	display: inline-block;
+	text-align: center;
 }
