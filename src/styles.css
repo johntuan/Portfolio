@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -115,9 +119,10 @@ p{
 }
 
 .sub-section {
-    display: flex;
+    display: inline-flex;
     justify-content: space-around;
     padding: 80px;
+    flex-wrap: wrap;
 }
 
 .sub-section-alt {
@@ -128,8 +133,7 @@ p{
 }
 
 .headshot {
-    width: 300px;
-    border-radius: 150px;
+    width: 700px;
 }
 
 .headshot-container { 
@@ -149,17 +153,14 @@ p{
     justify-content: space-around;
 }
 
-@media only screen and (max-width: 1000px) {
-    .project-container{
-        display: flex;
-        flex-wrap: wrap;
-    }
+.flex-direction{
+    flex-direction:row;
 }
 
 .project-image{
     margin-top: 25px;
     width: 250px;
-    border-radius: 125px; /*circle to box for project images */
+    border-radius: 0px; /*circle to box for project images */
 }
 
 hr {
@@ -191,7 +192,7 @@ a {
         border: 0;
         background-color: transparent;
         color: white;
-        font-size: 30px;   
+        font-size: 40px;   
         margin: 20px;
         align-self: flex-end;   
     }
@@ -215,12 +216,56 @@ a {
     .logo{
         display: none;
     }
-    .whatido{
+    whatido{
         display: flex;
-        padding: 80px;
+        flex-wrap: wrap;
     }
     .headshot-container{
         display: flex;
+        flex-wrap: wrap;
+    }
+    .information{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .project-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .headshot-container { 
+        display: flex;
+        align-items: center;
+    }
+    .whatido {
+        display: flex;
+    }
+    .bttbutton {
+        margin: 30px;
+    }
+    
+    .arrow-btn{
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        z-index: 9;
+    }
+
+    .arrow-btn a{
+        height: 49px;
+        width: 43px;
+        text-align: center;
+        background: coral;
+        display: block;
+        border-radius: 3px;
+        cursor: pointer; 
+    }
+    .arrow-btn a span{
+        color:#f2f2f2;
+        line-height: 49px;
+        font-size: 35px;
+    }
+    .h4 {
+        font-size: 35px;
     }
 }
 
@@ -228,9 +273,7 @@ container {
     width: 100%;
 	text-align: center;
 	margin: 35px 0 20px 0;
-    
 }
-
 /* Add styles to 'input' and 'textarea' selectors */
 input[type=text],input[type=email], textarea {
     width: 75%;
@@ -258,9 +301,10 @@ input[type=submit] {
 	text-align: center;
 }
 
-h3 {
+h4 {
     text-decoration: underline;
-    text-decoration-color: aquamarine;            
+    text-decoration-color: aquamarine;
+    font-size: 35px;            
 
 }
 
@@ -269,3 +313,76 @@ whatido {
     text-decoration-color: aquamarine;            
 
 }
+
+.content{
+	display: flex;
+	height:30px;
+}
+
+.information img {
+    margin-right: 10px;
+    display: block;
+}
+
+h5 {
+    font-size: 30px;   
+}
+bttbutton {
+    display: inline-block;
+    background-color: coral;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+bttbutton::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+bttbutton:hover {
+    cursor: pointer;
+    background-color: #989898;
+  }
+bttbutton:active {
+    background-color: #555;
+  }
+bttbutton.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+.arrow-btn{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9;
+}
+
+.arrow-btn a{
+    height: 49px;
+    width: 47px;
+    text-align: center;
+    background: coral;
+    display: block;
+    border-radius: 3px;
+    cursor: pointer; 
+}
+.arrow-btn a span{
+    color:#f2f2f2;
+    line-height: 49px;
+    font-size: 35px;
+}
+
